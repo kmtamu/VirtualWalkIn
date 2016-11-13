@@ -18,13 +18,19 @@ token=session.generate_token()
 
 def index(request):
     template = loader.get_template('index.html')
-    context ={ #Has all the data for index.html view to render to the user
-        'sessionID' : session_id,
-        'token' : token,
-        'Api_key' : api_key
-    }
-    return HttpResponse(template.render(context, request))
+    #context ={ #Has all the data for index.html view to render to the user
+     #   'sessionID' : session_id,
+      #  'token' : token,
+       # 'Api_key' : api_key
+    #}
+    return HttpResponse('<a href="/StreamLive">Continue</a>')
 
 
 def StreamLive(request):
-    return HttpResponse("<h1>music app homepage</h1>")
+    template = loader.get_template('StreamLive.html')
+    context = {  # Has all the data for index.html view to render to the user
+        'sessionID': session_id,
+        'token': token,
+        'Api_key': api_key
+    }
+    return HttpResponse(template.render(context,request))
