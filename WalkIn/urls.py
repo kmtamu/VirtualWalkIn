@@ -18,5 +18,8 @@ from . import views
 
 urlpatterns = [
 url(r'^$', views.index, name='index'),
-url(r'^StreamLive$', views.StreamLive, name='StreamLive'),
+url(r'^selectUser$', views.selectUser, name='selectUser'),
+url(r'^student$', views.student, name='student'),
+url(r'^presenter$', views.presenter, name='p1resenter'),
+url(r'^StreamLiv$', views.StreamLive, name='StreamLiv')
 ]

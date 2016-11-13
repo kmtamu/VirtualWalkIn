@@ -19,5 +19,5 @@ from . import views
 urlpatterns = [
 url(r'^$', views.index, name='index'),
 url(r'student.html', views.student, name='student'),
-url(r'fetchvid.html', views.fetchvid, name='vid')
+url(r'StreamLive.html', views.fetchvid, name='vid')
 ]
