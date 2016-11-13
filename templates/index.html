@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <script src="https://static.opentok.com/v2/js/opentok.js" charset="utf-8"></script>
 <head>
     <meta charset="UTF-8">
     <title>Does this work? </title>
 </head>
 <body>
-
+   <!--
     <script type = "text/javascript">
         //var apiKey=45717642;
         //var sessionId="1_MX40NTcxNzY0Mn5-MTQ3ODk4NzM5Nzg1NX4vVEVRcmEyd2c5U2wzQjJkUnZYWE9PQ3l-fg";
@@ -39,6 +39,29 @@
                 }
             });
         });
-    </script>
+    </script> -->
+
+
+<!-- button to hit next page -->
+
+<div>
+    <input type="button" id="buttonId" value="Press to join">
+</div>
+<script type="JAVASCRIPT">
+    $('#buttonId').click(function() {
+    $.ajax({
+        url: your_url,
+        method: 'POST', // or another (GET), whatever you need
+        data: {
+            name: value, // data you need to pass to your function
+            click: True
+        }
+        success: function (data) {
+            // success callback
+            // you can process data returned by function from views.py
+        }
+    });
+});
+</script>
 </body>
 </html>
