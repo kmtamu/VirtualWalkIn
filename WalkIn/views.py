@@ -27,10 +27,4 @@ def index(request):
 
 
 def StreamLive(request):
-    template = loader.get_template('StreamLive.html')
-    context ={ #Has all the data for index.html view to render to the user
-        'sessionID' : session_id,
-        'token' : token,
-        'Api_key' : api_key
-    }
-    return HttpResponse(template.render(context, request))
+    return HttpResponse("<h1>music app homepage</h1>")
